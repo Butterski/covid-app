@@ -28,7 +28,7 @@ const App = () => {
     setCovidCases(null);
     setTimeout(() => {
       setCovidCases(temp);
-    }, 100);
+    }, 10);
   }
 
   return (
