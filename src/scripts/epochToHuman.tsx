@@ -1,4 +1,4 @@
-function epochToHuman(epoch: number){
+function epochToHuman(epoch: any){
     return new Date(epoch*1000);
 }
 
