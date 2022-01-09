@@ -27,8 +27,6 @@ const App = () => {
     let temp = covidCases
     setCovidCases(null)
     setTimeout(() => {setCovidCases(temp)}, 100)
-    
-    
   }
 
   return (
@@ -60,6 +58,12 @@ const App = () => {
           className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded justify-center"
         >
           Reload
+        </button>
+        <button
+          onClick={() => print()}
+          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded justify-center"
+        >
+          Print
         </button>
         </div>
       
