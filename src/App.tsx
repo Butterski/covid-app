@@ -24,9 +24,11 @@ const App = () => {
   }, []);
 
   function reload() {
-    let temp = covidCases
-    setCovidCases(null)
-    setTimeout(() => {setCovidCases(temp)}, 100)
+    let temp = covidCases;
+    setCovidCases(null);
+    setTimeout(() => {
+      setCovidCases(temp);
+    }, 100);
   }
 
   return (
@@ -49,25 +51,23 @@ const App = () => {
               { mass: 1, tension: 210, friction: 130 },
             ]}
           />
-          
         </div>
         <br></br>
         <div className="flex justify-center mt-8">
-        <button
-          onClick={() => reload()}
-          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded justify-center"
-        >
-          Reload
-        </button>
-        <button
-          onClick={() => print()}
-          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded justify-center"
-        >
-          Print
-        </button>
+          <button
+            onClick={() => reload()}
+            className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded justify-center"
+          >
+            Reload
+          </button>
         </div>
-      
-        <abbr title={epochToHuman(date as any).toString()} className="underline decoration-solid absolute bottom-1 right-2 cursor-help">Last Updated</abbr>
+
+        <abbr
+          title={epochToHuman(date as any).toString()}
+          className="underline decoration-solid absolute bottom-1 right-2 cursor-help"
+        >
+          Last Updated
+        </abbr>
       </div>
     </div>
   );
