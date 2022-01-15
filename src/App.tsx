@@ -40,23 +40,15 @@ const App = () => {
         <br></br>
         <div className="text-6xl sm:text-7xl select-none flex justify-center my-4">
           <AnimatedNumbers
-            includeComma
-            animateToNumber={covidCases || 0}
-            configs={[
-              { mass: 1, tension: 220, friction: 100 },
-              { mass: 1, tension: 180, friction: 130 },
-              { mass: 1, tension: 280, friction: 90 },
-              { mass: 1, tension: 180, friction: 135 },
-              { mass: 1, tension: 260, friction: 100 },
-              { mass: 1, tension: 210, friction: 130 },
-            ]}
+            animateToNumber={covidCases}
+
           />
         </div>
         <br></br>
         <div className="flex justify-center mt-8">
           <button
             onClick={() => reload()}
-            className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded justify-center"
+            className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded justify-center drop-shadow"
           >
             Reload
           </button>
