@@ -4,8 +4,6 @@ import epochToHuman from "./scripts/epochToHuman";
 import AnimatedNumbers from "react-animated-numbers";
 
 const App = () => {
-  //"https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases2_v1/FeatureServer/2/query?where=Country_Region%20%3D%20'POLAND'&outFields=Country_Region,Confirmed,Last_Update&returnGeometry=false&outSR=4326&f=json"
-
   const [date, setDate] = useState([]);
   const [covidCases, setCovidCases] = useState();
 
@@ -16,8 +14,6 @@ const App = () => {
       )
       .then((response: AxiosResponse) => {
         console.log(response.data);
-        //const a = Object.values(response.data)
-        //setData(response.data);
         setCovidCases(response.data["features"][0]["attributes"]["Confirmed"]);
         setDate(response.data["features"][0]["attributes"]["Last_Update"]);
       });
